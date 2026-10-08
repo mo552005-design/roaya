@@ -36,13 +36,20 @@ h2{font-family:'Reem Kufi',Tahoma,sans-serif;font-size:1.9rem;margin:0 0 14px}
 .follow{background:var(--panel);border-radius:18px;padding:34px 24px;text-align:center;border:0}
 .follow .btn{margin:8px 5px}
 footer{padding:30px 0 40px;color:var(--soft);font-size:.9rem;text-align:center;border-top:1px solid var(--line)}
+
+form.idea{display:grid;gap:12px;margin-top:20px;max-width:560px}
+form.idea label{font-size:.95rem;color:var(--soft)}
+form.idea input,form.idea textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit}
+form.idea textarea{min-height:130px;resize:vertical}
+form.idea input:focus,form.idea textarea:focus{outline:3px solid var(--sun);outline-offset:2px}
+form.idea button{border:0;cursor:pointer;justify-self:start;font:inherit}
 </style>
 </head>
 <body>
 <div class="wrap">
 <nav>
   <a class="logo" href="#top">رؤية</a>
-  <div><a class="s" href="#about">عن القناة</a><a class="s" href="#topics">مواضيعنا</a><a class="s" href="#follow">تابعنا</a></div>
+  <div><a class="s" href="#about">عن القناة</a><a class="s" href="#topics">مواضيعنا</a><a class="s" href="#idea">اقتراح فكرة</a><a class="s" href="#follow">تابعنا</a></div>
 </nav>
 
 <header class="hero" id="top">
@@ -67,6 +74,16 @@ footer{padding:30px 0 40px;color:var(--soft);font-size:.9rem;text-align:center;b
     <li><b>الحقوق والواجبات</b><span>إيه اللي ليك وإيه اللي عليك، بلغة بسيطة.</span></li>
     <li><b>الشباب</b><span>أفكار ونصايح تساعد الشباب يبنوا مستقبلهم.</span></li>
   </ul>
+</section>
+
+<section id="idea">
+  <h2>اقترح فكرة فيديو</h2>
+  <p class="lead">عندك موضوع نفسك نتكلم فيه؟ اكتبلنا فكرتك وممكن تتحول لفيديو جديد.</p>
+  <form class="idea" action="https://formspree.io/f/mjygwvnw" method="POST">
+    <div><label for="msg">فكرتك</label><textarea id="msg" name="الفكرة" required placeholder="اكتب فكرة الفيديو هنا..."></textarea></div>
+    <div><label for="nm">اسمك (اختياري)</label><input id="nm" name="الاسم" type="text"></div>
+    <button class="btn main" type="submit">ابعت الفكرة</button>
+  </form>
 </section>
 
 <section id="follow" class="follow">
